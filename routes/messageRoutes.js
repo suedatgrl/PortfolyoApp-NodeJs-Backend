@@ -8,18 +8,21 @@ const router = express.Router();
 // @access  Private
 router.post('/', protect, async (req, res) => {
   try {
-    const { text } = req.body;
-    
-    if (!text) {
-      return res.status(400).json({ msg: 'Text is required' });
+    // Eğer AuthContext'ten gelen user varsa, name ve email'i otomatik olarak doldur
+    const name = req.user?.name || req.body.name;
+    const email = req.user?.email || req.body.email;
+    const { subject, message } = req.body;
+    if (!name || !email || !subject || !message) {
+      return res.status(400).json({ msg: 'Tüm alanlar zorunludur.' });
     }
-    
-    const message = await Message.create({
-      text,
+    const newMsg = await Message.create({
+      name,
+      email,
+      subject,
+      message,
       userId: req.user.id
     });
-    
-    res.status(201).json(message);
+    res.status(201).json(newMsg);
   } catch (error) {
     console.error('Create message error:', error);
     res.status(500).json({ msg: 'Server error' });
