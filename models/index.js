@@ -1,10 +1,11 @@
 const { Sequelize } = require('sequelize');
 const config = {
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || 'root@1234',
-  database: process.env.DB_NAME || 'portfolio_app',
-  dialect: 'mysql'
+  host: process.env.DB_HOST || 'bymcgbvzzkmrryvahmdz-mysql.services.clever-cloud.com',
+  user: process.env.DB_USER || 'ub6crrlpqlm2fjiv',
+  password: process.env.DB_PASSWORD || 't08tQ34VT9UdthsDekx9', //root@1234
+  database: process.env.DB_NAME || 'bymcgbvzzkmrryvahmdz',
+  dialect: 'mysql',
+  port: 3306
 };
 
 // Create Sequelize instance
