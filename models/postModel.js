@@ -17,20 +17,23 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false
     }
+  }, {
+    tableName: 'posts' // TABLO İSMİ KÜÇÜK HARFLİ
   });
-  
+
   Post.associate = function(models) {
     Post.belongsTo(models.User, {
       foreignKey: 'createdBy',
       as: 'author'
     });
-    
+
     Post.belongsToMany(models.User, {
-      through: 'SavedPosts',
+      through: models.SavedPost, // Burası da model referansı olmalı
       as: 'savedByUsers',
-      foreignKey: 'postId'
+      foreignKey: 'postId',
+      otherKey: 'userId'
     });
   };
-  
+
   return Post;
 };

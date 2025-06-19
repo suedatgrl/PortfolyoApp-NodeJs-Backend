@@ -1,4 +1,3 @@
-// Find this code:
 module.exports = (sequelize, DataTypes) => {
   const Message = sequelize.define('Message', {
     id: {
@@ -29,21 +28,14 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: true
     }
+  }, {
+    tableName: 'messages' // KÜÇÜK HARF
   });
 
-  // Change this association:
-  Message.associate = function(models) {
-    Message.belongsTo(models.User, {
-      foreignKey: 'userId', // This conflicts with the column name
-      as: 'sender' // This is causing the naming collision
-    });
-  };
-
-  // To this:
   Message.associate = function(models) {
     Message.belongsTo(models.User, {
       foreignKey: 'userId',
-      as: 'sender' // Changed from 'userId' to 'sender'
+      as: 'sender'
     });
   };
 

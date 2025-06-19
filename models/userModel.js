@@ -25,7 +25,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.ENUM('user', 'admin'),
       defaultValue: 'user'
     }
+  }, {
+    tableName: 'users' // KÜÇÜK HARF
   });
-  
+
   return User;
 };

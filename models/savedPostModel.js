@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'Users',
+        model: 'users', // KÜÇÜK HARF
         key: 'id'
       }
     },
@@ -17,11 +17,12 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'Posts',
+        model: 'posts', // KÜÇÜK HARF
         key: 'id'
       }
     }
   }, {
+    tableName: 'savedposts', // KÜÇÜK HARF
     indexes: [
       {
         unique: true,
@@ -29,6 +30,6 @@ module.exports = (sequelize, DataTypes) => {
       }
     ]
   });
-  
+
   return SavedPost;
 };
