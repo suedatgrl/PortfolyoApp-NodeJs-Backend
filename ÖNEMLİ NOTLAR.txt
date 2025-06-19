@@ -1,0 +1,24 @@
+
+
+Projeye ait video linki :  (2 adet videom bulunmaktadır. Toplam video süresi 3 dk)
+
+https://drive.google.com/file/d/1Z59l0xP0-MQWYPIiZMK6CLVOamYSwm-l/view?usp=sharing
+https://drive.google.com/file/d/1Z4pVfEvzMQh6L7zwSibQQi88VVbWxWuC/view?usp=sharing
+
+
+
+
+Önemli Notlar (AÇIKLAMA): Sizlere ilettiğim apk  güncel builde sahip değil . Build limitimi doldurduğum için ücretli  (19 dolar) versiyona geçmem gerekiyor fakat başka bir gün dilediğiniz  zaman güncel build apk versiyonunu size iletebilirim.  
+
+
+
+
+Projenin Github Konumu:
+ 
+Kişisel Portfolyo Backend kaynağı: 
+https://github.com/suedatgrl/PortfolyoApp-NodeJs-Backend.git
+
+Kişisel Portfolyo Frontend kaynağı: 
+https://github.com/suedatgrl/PortfolyoApp-ReactNative.git
+
+ 
